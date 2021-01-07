@@ -12,7 +12,7 @@ use App\Models\VoteList;
  * The Vote API Controller to start/stop a vote item or set the profile of a vote item
  * @package Controllers\EA
  */
-class VoteAPIController extends Controller
+class VoteAPIController extends Controller //inheritance
 {
     /**
      * A helper method to generate Json with the standard of following:

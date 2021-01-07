@@ -12,7 +12,7 @@ use Respect\Validation\Validator as v;
  * The EASetting Controller to show the page of setting in EA users
  * @package Controllers\EA
  */
-class EASettingController extends Controller
+class EASettingController extends Controller //inheritance
 {
     /**
      * user setting Pages

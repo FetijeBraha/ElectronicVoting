@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
  * @author  Yifan Wu
  * @package Model
  */
-class Candidate extends Model
+class Candidate extends Model //inheritance
 {
     protected $table = 'candidate';
     public $timestamps = false;

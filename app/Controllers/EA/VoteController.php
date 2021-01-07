@@ -16,7 +16,7 @@ use Respect\Validation\Validator as v;
  * The Vote Controller to show the page of starting/stopping a vote item or setting the profile of a vote item
  * @package Controllers\EA
  */
-class VoteController extends Controller
+class VoteController extends Controller //inheritance
 {
 
     /**

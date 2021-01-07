@@ -9,7 +9,7 @@ use App\Models\User;
  * The HomeController
  * @package Controllers
  */
-class HomeController extends Controller
+class HomeController extends Controller //inheritance
 {
 	public function index($request,$response)
 	{
