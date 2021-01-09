@@ -55,7 +55,7 @@ class AuthController extends Controller
 		);
 
 		if (!$auth) {
-			$this->flash->addMessage('error','Please check your username or password');
+			$this->flash->addMessage('error','Your username or password is wrong!');
 			return $response->withRedirect($this->router->pathFor('auth.signin'));
 		}
 
@@ -101,7 +101,7 @@ class AuthController extends Controller
 
 //        $code = Code::useCode($user->id,$request->getParam('code'));
 
-		$this->flash->addMessage('info','You have been signed up');
+		$this->flash->addMessage('info','You have been signed up successfully');
 
 		$this->auth->attempt($user->username,$request->getParam('password'));
 

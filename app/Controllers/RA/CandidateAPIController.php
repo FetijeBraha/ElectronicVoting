@@ -61,8 +61,8 @@ class CandidateAPIController extends Controller
     {
         $candidate = new Candidate();
         $candidate->addCandidate(
-            $request->getParam('name'),
-            $request->getParam('des'),
+            $request->getParam('c_name'),
+            $request->getParam('description'),
             (int)$request->getParam('vote_id')
         );
         return $this->generateJson($response, '1', 'This candidate has been added', '');
@@ -76,23 +76,23 @@ class CandidateAPIController extends Controller
     public function postUpdateCandidate($request, $response)
     {
         $candidate = new Candidate();
-        $query = $candidate->where('id', (int)$request->getParam('id'))->first();
+        $query = $candidate->where('c_id', (int)$request->getParam('c_id'))->first();
         if(!$query)
-            return $this->generateJson($response, '0', 'The candidate dose not exist', '');
+            return $this->generateJson($response, '0', 'The candidate dosn\'t exist', '');
 
         $query->updateCandidate(
-                $request->getParam('name'),
-                $request->getParam('des')
+                $request->getParam('c_name'),
+                $request->getParam('description')
             );
-        return $this->generateJson($response, '1', 'This candidate has been updated', '');
+        return $this->generateJson($response, '1', 'This candidate has been updated succesfully!', '');
     }
 
     public function postDelCandidate($request, $response)
     {
         $candidate = new Candidate();
         $candidate->delCandidate(
-                (int)  $request->getParam('id')
+                (int)  $request->getParam('c_id')
             );
-        return $this->generateJson($response, '1', 'This candidate has been updated', '');
+        return $this->generateJson($response, '1', 'This candidate has been updated succesfully!', '');
     }
 }

@@ -66,7 +66,7 @@ class BallotAPIController extends Controller
      * @return mixed
      */
     public function getVoteTitle($id){
-        $result = VoteList::where('id',$id)->first();
+        $result = VoteList::where('c_id',$id)->first();
         return $result->title;
     }
 

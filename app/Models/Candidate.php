@@ -13,28 +13,28 @@ class Candidate extends Model //inheritance
     public $timestamps = false;
 
     protected $fillable = [
-        'id',
-        'name',
-        'des',
+        'c_id',
+        'c_name',
+        'description',
         'vote_id'
     ];
 
     public function addCandidate($name,$description,$vote_id){
         $this->create([
-            'name' => $name,
-            'des' => $description,
+            'c_name' => $name,
+            'description' => $description,
             'vote_id' => $vote_id
         ]);
     }
 
     public function updateCandidate($name,$description){
         $this->update([
-            'name' => $name,
-            'des' => $description
+            'c_name' => $name,
+            'description' => $description
         ]);
     }
 
     public function delCandidate($id){
-        $this->where('id',$id)->delete();
+        $this->where('c_id',$id)->delete();
     }
 }
